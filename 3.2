@@ -1,0 +1,20 @@
+#(a) Extract numbers less and greater than a given number
+import numpy as np
+arr = np.array([10,20,30,40,50])
+specified_number=30
+less_than = arr[arr < specified_number]
+greater_than = arr[arr > specified_number]
+print("Less than 30:",less_than)
+print("Greater than 30:",greater_than)
+
+#(b) Indices of max and min values along axis
+import numpy as np
+arr2d = np.array([[10,60,30],[80,20,50]])
+print(arr2d)
+print("Max:", np.max(arr2d))              #80
+print("Min:", np.min(arr2d))              #10
+print("Argmax:", np.argmax(arr2d))        # 3 (80 is at index 3  in flattered array)
+print("Argmin:", np.argmin(arr2d))        # 0 (10 is at index 0)
+# Argmax/Argmin along aixs
+print("Argmax along axis 0:", np.argmax(arr2d, axis=0))   #[1 0 1]
+print("Argmin along axis 1:", np.argmin(arr2d, axis=1))   #[0 1]
