@@ -1,0 +1,25 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+# Step 1: Create time-series data
+date_range = pd.date_range(start='2025-01-01', periods=10, freq='D')
+values = [100, 110, 115, 120, 125, 130, 128, 135, 140, 145]
+# Step 2: Create DataFrame
+df = pd.DataFrame({'Date': date_range, 'Value': values})
+
+# Step 3: Plot time-series
+plt.figure(figsize=(10, 5))
+plt.plot(df['Date'], df['Value'], marker='o', linestyle='-', color='blue')
+# Step 4: Customize labels and title
+plt.title("Time-Series Data Visualization")
+plt.xlabel("Date")
+plt.ylabel("Value")
+# Step 5: Format x-axis dates
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%b %d, %Y'))
+plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=1))
+# Step 6: Rotate date labels
+plt.xticks(rotation=45)
+# Step 7: Display
+plt.grid(True)
+plt.tight_layout()
+plt.show()
