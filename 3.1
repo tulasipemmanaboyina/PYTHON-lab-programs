@@ -1,0 +1,44 @@
+import numpy as np
+#3.1 (a) To get help on the add() function
+import numpy as np
+x=np.add(1, 2)
+print(x)
+#(b) To test whether name of the elements of  a given array is zero.
+import numpy as np
+arr = np.array([1,2,3,4])
+print("\nAll elements are non-zero:",np.all(arr))
+#(c) To create an element-wise comparison (greater,greater_equal,
+#less and less_equal,equal,equal within a tolerance) of two given arrays.
+#greater
+import numpy as np
+a = np.array([1,2,3])
+b = np.array([3,2,1])
+print("\na > b:", np.greater(a,b))
+#greater_equal
+import numpy as np
+a = np.array([1,2,3])
+b = np.array([3,2,1])
+print("\na >= b:", np.greater_equal(a, b))
+#less
+import numpy as np
+a = np.array([1,2,3])
+b = np.array([3,2,1])
+print("\na < b:",np.less(a, b))
+#equal
+import numpy as np
+a = np.array([1,2,3])
+b = np.array([3,2,1])
+print("\na == b:", np.equal(a, b))
+#zeros
+import  numpy as np
+#a = np.array([1,2,3])
+#b = np.array([3,2,1])
+print("\nzeros:",np.zeros((3,2)))
+#ones
+import  numpy as np
+a = np.array([1,2,3])
+b = np.array([3,2,1])
+print("Ones:",np.ones((2,3)))
+#linspace
+import numpy as np
+print("Linspace:",np.linspace(100,1500,8))
